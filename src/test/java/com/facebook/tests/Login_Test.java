@@ -1,6 +1,7 @@
 package com.facebook.tests;
 
 import com.grondle.data.FacebookData;
+import com.grondle.pages.FacebookMainPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,10 +22,15 @@ public class Login_Test {
 
         public WebDriver driver;
 
+
         @BeforeClass(alwaysRun = true)
             public void setup(){
                     driver = new FirefoxDriver();
-                    //driver = new SafariDriver();
+
+                    // injecting using FacebookMainPage objects into our tests systematically rather than
+                    // individually within tests FacebookMainPage fbMainPage;
+                    // instantiate the fbMainPage objects to start replacing literal texts with variables
+                    // fbMainPage = new FacebookMainPage(driver);
             }
 
 
