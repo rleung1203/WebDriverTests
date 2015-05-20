@@ -22,14 +22,26 @@
         </groups>
         <classes>
             <class name="com.facebook.tests.Login_Test"/>
-            <!-- this will exclude the filloutPassFld test method  from group p2 if this is uncommented
-            <methods>
-                <exclude name="filloutPassFld">
-                </exclude>
-            </methods>
-            -->
+
+                <!-- <methods>
+                     <exclude name="filloutPassFld">
+                     </exclude>
+                </methods>
+                -->
+            </classes>
+    </test>
+
+    <test name="P3 Test">
+        <groups>
+            <run>
+                <include name="p3"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.facebook.tests.Login_Test"/>
         </classes>
     </test>
+
 
 </suite>
 
